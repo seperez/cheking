@@ -1,7 +1,7 @@
 var express = require('express'),
     router = express.Router(),
     auth = require('./auth.js'),
-    events = require('./events.js'),
+    events = require('./meetings.js'),
     user = require('./users.js');
 
 /*
@@ -12,11 +12,11 @@ router.post('/login', auth.login);
 /*
 * Routes that can be accessed only by autheticated users
 */
-router.get('/api/v1/events', events.getAll);
-router.get('/api/v1/event/:id', events.getOne);
-router.post('/api/v1/event/', events.create);
-router.put('/api/v1/event/:id', events.update);
-router.delete('/api/v1/event/:id', events.delete);
+router.get('/api/v1/meetings', meetings.getAll);
+router.get('/api/v1/meeting/:id', meetings.getOne);
+router.post('/api/v1/meeting/', meetings.create);
+router.put('/api/v1/meeting/:id', meetings.update);
+router.delete('/api/v1/meeting/:id', meetings.delete);
 
 /*
 * Routes that can be accessed only by authenticated & authorized users
