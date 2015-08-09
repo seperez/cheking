@@ -1,0 +1,17 @@
+{
+  "name": "checkin",
+  "version": "0.1.0",
+  "description": "Aplicación para el registro y recepción de invitados en eventos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastián M. Pérez",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "jwt-simple": "^0.3.0",
+    "morgan": "^1.6.1"
+  }
+}
