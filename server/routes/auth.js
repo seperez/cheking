@@ -33,7 +33,17 @@ var auth = {
     validate: function(username, password) {
         // spoofing the DB response for simplicity
         var dbUserObj = { // spoofing a userobject from the DB. 
-            name: 'seperez',
+            name: 'perezsebastianm',
+            role: 'admin',
+            username: 'perezsebastianm@gmail.com'
+        };
+        return dbUserObj;
+    },
+
+    validateUser: function(username) {
+        // spoofing the DB response for simplicity
+        var dbUserObj = { // spoofing a userobject from the DB. 
+            name: 'perezsebastianm',
             role: 'admin',
             username: 'perezsebastianm@gmail.com'
         };
@@ -47,7 +57,8 @@ var auth = {
 function genToken(user) {
     var expires = expiresIn(7),
         token = jwt.encode({
-            exp: expires
+            exp: expires,
+            user: user
         }, require('../config/secret')());
 
     return {
