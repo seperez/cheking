@@ -33,16 +33,16 @@ var meetings = {
 
 var data = [
     {
-        id: '1'
-        name: 'Meeting 1',
+        id: '1',
+        name: 'Meeting 1'
     }, 
     {
-        id: '2'
-        name: 'Meeting 2',
+        id: '2',
+        name: 'Meeting 2'
     }, 
     {
-        id: '3'
-        name: 'Meeting 3',
+        id: '3',
+        name: 'Meeting 3'
     }
 ];
 

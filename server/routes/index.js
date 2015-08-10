@@ -1,7 +1,7 @@
 var express = require('express'),
     router = express.Router(),
     auth = require('./auth.js'),
-    events = require('./meetings.js'),
+    meetings = require('./meetings.js'),
     user = require('./users.js');
 
 /*
