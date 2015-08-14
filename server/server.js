@@ -6,7 +6,9 @@ var express = require('express'),
     mongoose = require('mongoose');
 
 //Connect to mongodb database
-mongoose.connect('mongodb://localhost:27017/cheking');
+
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds033133.mongolab.com:33133/heroku_30r05dw2');
+//mongoose.connect('mongodb://localhost:27017/cheking');
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'DB Connection error:'));
