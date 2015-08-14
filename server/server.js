@@ -1,3 +1,5 @@
+require('newrelic');
+
 var express = require('express'),
     path = require('path'),
     logger = require('morgan'),
@@ -7,7 +9,7 @@ var express = require('express'),
 
 //Connect to mongodb database
 
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds033133.mongolab.com:33133/heroku_30r05dw2');
+mongoose.connect(process.env.MONGOLAB_URI);
 //mongoose.connect('mongodb://localhost:27017/cheking');
 var db = mongoose.connection;
 
