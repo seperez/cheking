@@ -10,6 +10,7 @@ var mongoose = require('mongoose'),
  * Methods
  */
 exports.getAll = function(req, res) {
+    console.log('Entra');
     Meeting
         .find()
         .exec(function(err, meetings) {
